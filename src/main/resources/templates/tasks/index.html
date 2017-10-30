@@ -9,8 +9,10 @@
 <p th:if="${tasks.isEmpty()}">タスクがありません</p>
 <ul th:unless="${tasks.isEmpty()}">
     <li th:each="task: ${tasks}">
-        <span th:unless="${task.done}" th:text="${task.content}"></span>
-        <s th:if="${task.done}" th:text="${task.content}"></s>
+        <a th:href="@{tasks/{id}/edit(id=${task.id})}">
+            <span th:unless="${task.done}" th:text="${task.content}"></span>
+            <s th:if="${task.done}" th:text="${task.content}"></s>
+        </a>
     </li>
 </ul>
 </body>

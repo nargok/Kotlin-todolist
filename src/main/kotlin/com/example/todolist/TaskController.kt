@@ -29,7 +29,7 @@ class TaskController(val taskRepository: TaskRepository) {
     }
 
     @PostMapping("")
-    fun crete(@Validated form: TaskCreateForm,
+    fun create(@Validated form: TaskCreateForm,
               bindingResult: BindingResult): String {
         if (bindingResult.hasErrors())
             return "tasks/new"

@@ -41,4 +41,5 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	compile('org.springframework.boot:spring-boot-starter-jdbc')
 	runtime('com.h2database:h2')
+	testCompile('org.assertj:assertj-core:3.8.0')
 }
